@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .hero {
+      padding: 5rem 1rem;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      color: #007bff;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      color: #6c757d;
+    }
+
+    .hero .lead {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero .btn {
+      font-size: 1.25rem;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border-radius: 30px;
+      /* Rounded button */
+    }
+  </style>
+</head>
+
+<body>
+  {% include "quiz/navbar.html" %}
+
+  <section id="section-hero" class="hero d-flex justify-content-center align-items-center">
+    <div class="container">
+      <h1 class="display-1">Quiz</h1>
+      <p class="display-4 d-none d-sm-block">Test your knowledge in the best possible way</p>
+      <p class="lead">Sign up if you haven't already and get access to millions of quizzes on the topic of your
+        interest.</p>
+      <div class="mb-4">
+        <a href="/student/studentsignup" class="btn btn-lg btn-primary rounded-pill"><i class="fa fa-user-plus"
+            aria-hidden="true"></i> Student Sign Up</a>
+        <a href="/teacher/teachersignup" class="btn btn-lg btn-primary rounded-pill"><i class="fa fa-user-plus"
+            aria-hidden="true"></i> Teacher Sign Up</a>
+      </div>
+    </div>
+  </section>
+
+  {% include "quiz/footer.html" %}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
